@@ -1,0 +1,45 @@
+/* Css para configurar os elementos da página principal - "menu.html" */
+
+@charset "UTF-8";
+
+img#Logo{
+    height: 48h;
+    width: 40vh;
+}
+
+nav#Menu{
+    height: 17vh;
+    width: auto;
+    font-size: 125%;
+    color: #B41D1D;
+    position: absolute;
+    top: 50vh;
+    border: 2px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-left: none;
+    display: flex;
+}
+
+nav#Menu li{
+    height: 100%;
+    width: 20%;
+    border-left: 1px solid #CCCCCC;
+    text-align: center;
+    line-height: 200%;
+    list-style: none;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+nav#Menu li:hover{
+    background-color: #B41D1D;
+    border-left-color: white;
+    color: #CCCCCC;
+}
+
+img#Icone{
+    height: 60%;
+    width: 30%;
+    transition:0.5s;
+}

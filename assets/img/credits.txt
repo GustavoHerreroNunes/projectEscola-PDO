@@ -1,0 +1,11 @@
+{excluir1.png,
+excluir2.png,
+pesquisar1.png,
+pesquisar2.png,
+alterar1.png,
+alterar2.png,
+listar1.png,
+listar2.png}: Ícones feitos por Freepik de www.flaticon.com
+
+{cadastrar1.png,
+cadastrar2.png}: Ícones feitos por iconixar de www.flaticon.com
