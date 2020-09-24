@@ -13,3 +13,7 @@ body{
     background-image: url("../assets/img/university-blur.jpg");
     background-size: 100%;
 }
+
+a{
+    text-decoration: none;
+}

@@ -35,6 +35,12 @@ nav#Menu li{
 nav#Menu li:hover{
     background-color: #B41D1D;
     border-left-color: white;
+}
+
+nav#Menu a{
+    color: #B41D1D;
+}
+nav#Menu a:hover{
     color: #CCCCCC;
 }
 

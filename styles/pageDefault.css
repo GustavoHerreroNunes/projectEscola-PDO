@@ -1,0 +1,78 @@
+/*Css para configurar os itens comuns à todas as páginas do projeto*/
+
+/*Barra de Menu*/
+nav#Menu{
+    height: 14vh;
+    width: auto;
+    font-size: 125%;
+    color: #B41D1D;
+    margin-top: 10vh;
+    border: 2px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-left: none;
+    display: flex;
+}
+nav#Menu li{
+    height: 100%;
+    width: 20%;
+    border-left: 1px solid #CCCCCC;
+    text-align: center;
+    line-height: 200%;
+    list-style: none;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+nav#Menu li:hover{
+    background-color: #B41D1D;
+    border-left-color: white;
+}
+nav#Menu a{
+    color: #B41D1D;
+}
+nav#Menu a:hover{
+    color: #CCCCCC;
+}
+img#Icone{
+    height: 55%;
+    width: 25%;
+}
+img#Logo{
+    height: 100%;
+    width: 70%;
+    margin-top: -13.5%;
+    transition: 0.5s;
+}
+img#Logo:hover{
+    height: 105%;
+    width: 75%;
+    margin-top: -14.5%;
+}
+
+/*Conteúdo da página*/
+div#Conteudo{
+    padding-top: 11vh;
+    height: 64.5vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 3.3vh;
+}
+div#Conteudo p{
+    font-size: 2.2vh;
+}
+div#Conteudo input#textBox{
+    font-size: 2.2vh;
+}
+div#Conteudo #button{
+    padding: 0.7vh;
+    border: 2px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #CCCCCC;
+    font-size: 2.2vh;
+    color: #B41D1D;
+    background-color: white;
+}
+div#Conteudo #button:hover{
+    background-color:#B41D1D;
+    color: #CCCCCC;
+}
