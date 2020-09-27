@@ -1,0 +1,21 @@
+/*Css para configurar os itens do arquivo "transition.php"*/
+
+div#orgHori {
+    display: flex;
+}
+
+div#Tabelas {
+    margin: 2vh;
+    padding: 1.5vh;
+    border: 4px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #ADADAD;
+    color: #B41D1D;
+    background-color: white;
+    transition: 0.5s;
+}
+div#Tabelas:hover{
+    color: #CCCCCC;
+    background-color: #B41D1D;
+}
