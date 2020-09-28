@@ -2,11 +2,15 @@
 
 div#orgHori {
     display: flex;
+    margin-left: 20.7%;
+    margin-right: 20.7%;
 }
 
 div#Tabelas {
+    height: 35vh;
+    width: 30vh;
     margin: 2vh;
-    padding: 1.5vh;
+    padding: 1.8vh;
     border: 4px;
     border-radius: 8px;
     border-style: solid;
@@ -18,4 +22,8 @@ div#Tabelas {
 div#Tabelas:hover{
     color: #CCCCCC;
     background-color: #B41D1D;
+}
+div#Tabelas img{
+    height: 65%;
+    width: auto;
 }

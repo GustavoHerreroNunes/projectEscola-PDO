@@ -2,13 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>UJB - Bancos de Dados</title>
+        <title>UJB - Tabelas</title>
         <link rel="icon" href="../assets/img/logo/logo-Sem_Letras.png" />
         <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
         <link rel="stylesheet" type="text/css" href="../styles/pageDefault.css" />
         <link rel="stylesheet" type="text/css" href="../styles/transition.css" />
 
     </head>
+
+    <script language="javascript" src="../opSelect.js"></script>
+
     <body>
         <nav id="Menu">
             
@@ -77,50 +80,38 @@
                         Ação de Manutenção -> linha(0 - 4)
                         Tabela de "db_escola" -> coluna(0 - 2)*/
                     $pages = array(
-                        0 => array("cadasAluno.php", "cadasCurso.php", "cadasDisc.php"),
-                        1 => array("excluirAluno.php", "excluirCurso.php", "excluirDisc.php"),
-                        2 => array("pesqAluno.php", "pesqCurso.php", "pesqDisc.php"),
-                        3 => array("alterarAluno.php", "alterarCurso.php", "alterarDisc.php"),
-                        4 => array("listarAluno.php", "listarCurso.php", "menu.html"),
+                        0 => array("cadastrar/cadasAluno.php", "cadastrar/cadasCurso.php", "cadastrar/cadasDisc.php"),
+                        1 => array("excluir/excluirAluno.php", "excluir/excluirCurso.php", "excluir/excluirDisc.php"),
+                        2 => array("pesquisar/pesqAluno.php", "pesquisar/pesqCurso.php", "pesquisar/pesqDisc.php"),
+                        3 => array("alterar/alterarAluno.php", "alterar/alterarCurso.php", "alterar/alterarDisc.php"),
+                        4 => array("listar/listarAluno.php", "listar/listarCurso.php", "listar/listarDisc.php"),
                     );
             ?>
-                <h1>Selecione um Banco de Dados</h1>
+                <h1>Selecione uma Tabela</h1>
                 
                 <div id="orgHori">
                 <a href=<?php echo $pages[$op][0]; ?>>
                 <div id="Tabelas">
-                    <h2>Aluno</h2>
-
-                    Registros de todos os Alunos matriculados na Universidade
+                    <img src="../assets/img/icons/tables/aluno1.png" />
+                    <hr>
                     <br>
-                    matricula<b>(PK)</b>	- varchar(5)&nbsp;&nbsp;&nbsp;&nbsp;nome - varchar(50)<br>
-                    endereco - varchar(50)&nbsp;&nbsp;&nbsp;&nbsp;cidade - varchar(30)<br>
-                    codcurso - char(2)
-                    </h5>
+                    <h2>Aluno</h2>
                 </div>
                 </a>
                 <a href=<?php echo $pages[$op][1]; ?>>
                 <div id="Tabelas">
-                    <h2>Curso</h2>
-
-                    Registros de todos os Cursos disponíveis na Universidade
+                    <img src="../assets/img/icons/tables/curso1.png" />
+                    <hr>
                     <br>
-                    codcurso<b>(PK)</b>	- char(2)&nbsp;&nbsp;&nbsp;&nbsp;nome - varchar(50)<br>
-                    coddisc1 - char(2)&nbsp;&nbsp;&nbsp;&nbsp;coddisc2 - char(2)<br>
-                    coddisc3 - char(2)
-                    </h5>
+                    <h2>Curso</h2>
                 </div>
                 </a>
                 <a href=<?php echo $pages[$op][2]; ?>>
                 <div id="Tabelas">
-                    <h2>Disciplina</h2>
-
-                    Registros de todas as Disciplinas de cursos da Universidade
+                    <img src="../assets/img/icons/tables/disc1.png" />
+                    <hr>
                     <br>
-                    codcurso<b>(PK)</b>	- char(2)&nbsp;&nbsp;&nbsp;&nbsp;nome - varchar(50)<br>
-                    coddisc1 - char(2)&nbsp;&nbsp;&nbsp;&nbsp;coddisc2 - char(2)<br>
-                    coddisc3 - char(2)
-                    </h5>
+                    <h2>Disciplina</h2>
                 </div>
                 </a>
                 </div>
@@ -128,12 +119,18 @@
                 }else{
             ?>
                 <h1>Error 404</h1>
+                <br>
+                Página não encontrada
             <?php
                 }
             ?>
 
             </center>
         </div>
+        
+        <form name="operation" method="POST" action="transition.php">
+            <input type="hidden" name="opSelect" value="5">
+        </form>
     </body>
 
 </html>
