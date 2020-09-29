@@ -56,7 +56,7 @@
             try{
                 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("insert into curso values (null,?,?,?,?)");//Inserindo por código sql um novo registro, com 4 parâmetros ainda não definidos
+                $sql = $this->conn->prepare("insert into cursos values (null,?,?,?,?)");//Inserindo por código sql um novo registro, com 4 parâmetros ainda não definidos
                 @$sql->bindParam(1, $this->getNome(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($nome)
                 @$sql->bindParam(2, $this->getCodDisc1(), PDO::PARAM_STR);//Definindo segundo parâmetro ($codDisc1)
                 @$sql->bindParam(3, $this->getCodDisc2(), PDO::PARAM_STR);//Definindo terceiro parâmetro ($codDisc2)
@@ -82,7 +82,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from curso where codcurso = ?");//Selecionando todos os campos de curso com o codcurso passado por parâmetro ainda não definido
+                $sql = $this->conn->prepare("select * from cursos where codcurso = ?");//Selecionando todos os campos de "cursos" com o codcurso passado por parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getCodCurso(), PDO::PARAM_STR);//Definindo o parâmetro
                 $sql->execute();
                 return $sql->fechAll();//Carrega uma matriz com os campos selecionados da tabela do banco de dados
@@ -101,7 +101,7 @@
             try{
             
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("update curso set nome = ?, coddisc1 = ?, coddisc2 = ?, coddisc3 = ? where codcurso = ?");//Atualizando os campos do registro passando parâmetros ainda não definidos
+                $sql = $this->conn->prepare("update cursos set nome = ?, coddisc1 = ?, coddisc2 = ?, coddisc3 = ? where codcurso = ?");//Atualizando os campos do registro passando parâmetros ainda não definidos
                 @$sql->bindParam(1, $this->getNome(), PDO::PARAM_STR);//Definindo primeiro parâmetro
                 @$sql->bindParam(2, $this->getCodDisc1(), PDO::PARAM_STR);//Definindo segundo parâmetro
                 @$sql->bindParam(3, $this->getCodDisc2(), PDO::_PARAM_STR);//Definindo terceiro parâmetro
@@ -128,7 +128,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from curso where nome like ?");//Selecionando todos os campos ligados ao nome passado pelo parâmetro ainda não definido
+                $sql = $this->conn->prepare("select * from cursos where nome like ?");//Selecionando todos os campos ligados ao nome passado pelo parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getNome(), PDO::PARAM_STR);//Definindo o parâmetro
                 $sql->execute();
                 return $sql->fetchAll();//Retorna uma matriz com os dados selecionados
@@ -147,7 +147,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("delete * from curso where codcurso = ?");//Deletando o registro que tenha o codcurso passado por parâmetro ainda não definido
+                $sql = $this->conn->prepare("delete * from cursos where codcurso = ?");//Deletando o registro que tenha o codcurso passado por parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getCodCurso(), PDO::PARAM_STR);//Definindo o parâmetro
 
                 if($sql->execute() == 1){//Se a execução do código sql ocorrer sem erros
@@ -175,7 +175,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from curso order by nome");//Selecionando todos os registros de "curso" e ordenando em ordem alfabética
+                $sql = $this->conn->prepare("select * from cursos order by nome");//Selecionando todos os registros de "cursos" e ordenando em ordem alfabética
                 $sql->execute();
                 return $sql->fetchAll();//Retorna uma matriz com os dados selecionados
                 $this->conn = null;

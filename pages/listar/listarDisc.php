@@ -72,7 +72,7 @@
             <br>
             <?php
 
-                include_once './../../conectionDB/Disciplina.php';
+                include_once './../../conectionDB/disciplina.php';
                 $dsc = new Disciplina();
                 $pro_bd = $dsc->listar();
 

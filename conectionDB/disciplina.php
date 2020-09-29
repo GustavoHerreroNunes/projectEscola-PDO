@@ -32,7 +32,7 @@
             try{
                 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("insert into disciplina values (null,?)");//Inserindo por código sql um novo registro, com 1 parâmetro ainda não definido
+                $sql = $this->conn->prepare("insert into disciplinas values (null,?)");//Inserindo por código sql um novo registro, com 1 parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getNomeDisciplina(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($nomeDisciplina)
 
                 
@@ -55,7 +55,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from disciplina where CodDisciplina = ?");//Selecionando todos os campos de disciplina com o CodDisciplina passado por parâmetro ainda não definido
+                $sql = $this->conn->prepare("select * from disciplinas where CodDisciplina = ?");//Selecionando todos os campos de "disciplinas" com o CodDisciplina passado por parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getCodDisciplina(), PDO::PARAM_STR);//Definindo o parâmetro
                 $sql->execute();
                 return $sql->fechAll();//Carrega uma matriz com os campos selecionados da tabela do banco de dados
@@ -74,7 +74,7 @@
             try{
             
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("update disciplina set NomeDisciplina = ? where CodDisciplina = ?");//Atualizando os campos do registro passando parâmetros ainda não definidos
+                $sql = $this->conn->prepare("update disciplinas set NomeDisciplina = ? where CodDisciplina = ?");//Atualizando os campos do registro passando parâmetros ainda não definidos
                 @$sql->bindParam(1, $this->getNomeDisciplina(), PDO::PARAM_STR);//Definindo primeiro parâmetro
                 @$sql->bindParam(2, $this->getCodDisciplina(), PDO::_PARAM_STR);//Definindo segundo parâmetro
 
@@ -98,7 +98,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from disciplina where NomeDisciplina like ?");//Selecionando todos os campos ligados ao nome passado pelo parâmetro ainda não definido
+                $sql = $this->conn->prepare("select * from disciplinas where NomeDisciplina like ?");//Selecionando todos os campos ligados ao nome passado pelo parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getNomeDisciplina(), PDO::PARAM_STR);//Definindo o parâmetro
                 $sql->execute();
                 return $sql->fetchAll();//Retorna uma matriz com os dados selecionados
@@ -117,7 +117,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("delete * from disciplina where CodDisciplina = ?");//Deletando o registro que tenha o CodDisciplina passado por parâmetro ainda não definido
+                $sql = $this->conn->prepare("delete * from disciplinas where CodDisciplina = ?");//Deletando o registro que tenha o CodDisciplina passado por parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getCodDisciplina(), PDO::PARAM_STR);//Definindo o parâmetro
 
                 if($sql->execute() == 1){//Se a execução do código sql ocorrer sem erros
@@ -145,7 +145,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("select * from disciplina order by NomeDisciplina");//Selecionando todos os registros de "disciplina" e ordenando em ordem alfabética
+                $sql = $this->conn->prepare("select * from disciplinas order by NomeDisciplina");//Selecionando todos os registros de "disciplinas" e ordenando em ordem alfabética
                 $sql->execute();
                 return $sql->fetchAll();//Retorna uma matriz com os dados selecionados
                 $this->conn = null;
