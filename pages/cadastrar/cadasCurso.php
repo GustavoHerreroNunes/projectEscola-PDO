@@ -75,6 +75,11 @@
                     <legend><b>Dados do Curso:</b></legend>
                     <br>
                         <p>
+                            Código:
+                            <input type="text" name="txbCod" size="20" placeholder="Código do Curso" id="textBox">
+                        </p>
+                        <br>
+                        <p>
                             Nome:
                             <input type="text" name="txbNome" size="30" maxlength="50" placeholder="Nome do Curso" id="textBox">
                         </p>
@@ -113,6 +118,7 @@
 
                     include_once './../../conectionDB/curso.php';
                     $crs = new Curso();
+                    $crs->setCodCurso($txbCod);
                     $crs->setNome($txbNome);
                     $crs->setCodDisc1($txbDisc1);
                     $crs->setCodDisc2($txbDisc2);

@@ -32,8 +32,9 @@
             try{
                 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("insert into disciplinas values (null,?)");//Inserindo por código sql um novo registro, com 1 parâmetro ainda não definido
-                @$sql->bindParam(1, $this->getNomeDisciplina(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($nomeDisciplina)
+                $sql = $this->conn->prepare("insert into disciplinas values (?,?)");//Inserindo por código sql um novo registro, com 2 parâmetro ainda não definido
+                @$sql->bindParam(1, $this->getCodDisciplina(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($codDisciplina)
+                @$sql->bindParam(2, $this->getNomeDisciplina(), PDO::PARAM_STR);//Defindo segundo parâmetro ($nomeDisciplina)
 
                 
                 if($sql->execute() == 1){//Se a execução do comando sql ocorrer sem erros

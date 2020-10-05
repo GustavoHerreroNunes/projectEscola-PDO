@@ -75,6 +75,11 @@
                     <legend><b>Dados do Aluno:</b></legend>
                     <br>
                         <p>
+                            Matrícula:
+                            <input type="text" name="txbMatric" size="20" placeholder="Matrícula (00000)" id="textBox">
+                        </p>
+                        <br>
+                        <p>
                             Nome:
                             <input type="text" name="txbNome" size="30" maxlength="50" placeholder="Nome do Aluno" id="textBox">
                         </p>
@@ -113,6 +118,7 @@
 
                     include_once './../../conectionDB/aluno.php';
                     $aln = new Aluno();
+                    $aln->setMatricula($txbMatric);
                     $aln->setNome($txbNome);
                     $aln->setEndereco($txbEnder);
                     $aln->setCidade($txbCidade);

@@ -56,11 +56,12 @@
             try{
                 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("insert into alunos values (null,?,?,?,?)");//Inserindo por código sql um novo registro, com 4 parâmetros ainda não definidos
-                @$sql->bindParam(1, $this->getNome(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($nome)
-                @$sql->bindParam(2, $this->getEndereco(), PDO::PARAM_STR);//Definindo segundo parâmetro ($endereco)
-                @$sql->bindParam(3, $this->getCidade(), PDO::PARAM_STR);//Definindo terceiro parâmetro ($cidade)
-                @$sql->bindParam(4, $this->getCodCurso(), PDO::PARAM_STR);//Definindo quarto parâmetro ($codCurso)
+                $sql = $this->conn->prepare("insert into alunos values (?,?,?,?,?)");//Inserindo por código sql um novo registro, com 5 parâmetros ainda não definidos
+                @$sql->bindParam(1, $this->getMatricula(), PDO::PARAM_STR);//Defindo primeiro parâmetro ($matricula)
+                @$sql->bindParam(2, $this->getNome(), PDO::PARAM_STR);//Defindo segundo parâmetro ($nome)
+                @$sql->bindParam(3, $this->getEndereco(), PDO::PARAM_STR);//Definindo terceiro parâmetro ($endereco)
+                @$sql->bindParam(4, $this->getCidade(), PDO::PARAM_STR);//Definindo quarto parâmetro ($cidade)
+                @$sql->bindParam(5, $this->getCodCurso(), PDO::PARAM_STR);//Definindo quinto parâmetro ($codCurso)
 
                 
                 if($sql->execute() == 1){//Se a execução do comando sql ocorrer sem erros

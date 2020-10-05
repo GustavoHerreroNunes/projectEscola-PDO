@@ -75,6 +75,11 @@
                     <legend><b>Dados da Disciplina:</b></legend>
                     <br>
                         <p>
+                            Código:
+                            <input type="text" name="txbCod" size="25" placeholder="Código da Disciplina" id="textBox">
+                        </p>
+                        <br>
+                        <p>
                             Nome:
                             <input type="text" name="txbNome" size="30" maxlength="50" placeholder="Nome do Curso" id="textBox">
                         </p>
@@ -98,6 +103,7 @@
 
                     include_once './../../conectionDB/disciplina.php';
                     $dsc = new Disciplina();
+                    $dsc->setCodDisciplina($txbCod);
                     $dsc->setNomeDisciplina($txbNome);
 
                     echo "<h4><br><br>".$dsc->salvar()."</h4>";
