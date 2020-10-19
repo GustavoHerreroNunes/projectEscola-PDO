@@ -118,7 +118,7 @@
             try{
 
                 $this->conn = new Conectar();//Instânciando a classe Conectar
-                $sql = $this->conn->prepare("delete * from disciplinas where CodDisciplina = ?");//Deletando o registro que tenha o CodDisciplina passado por parâmetro ainda não definido
+                $sql = $this->conn->prepare("delete from disciplinas where CodDisciplina = ?");//Deletando o registro que tenha o CodDisciplina passado por parâmetro ainda não definido
                 @$sql->bindParam(1, $this->getCodDisciplina(), PDO::PARAM_STR);//Definindo o parâmetro
 
                 if($sql->execute() == 1){//Se a execução do código sql ocorrer sem erros
